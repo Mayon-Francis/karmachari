@@ -5,13 +5,13 @@ import styles from "@/styles/student/Registration.module.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { toast } from "react-hot-toast";
 import { getSchools, handleLogin } from "@/utils/requests";
-import {handleRegister} from "@/utils/requests"
+import { handleRegister } from "@/utils/requests";
 
 function StudentRegistration() {
-
   //personal details
   const [name, setName] = React.useState("");
   const [parentName, setParentName] = React.useState("");
+  const [photo, setPhoto] = React.useState("");
   const [dob, setDob] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [emergency, setEmergency] = React.useState("");
@@ -19,7 +19,7 @@ function StudentRegistration() {
 
   //Academic Details
   const [schools, setSchools] = React.useState([]);
-  const [school, setSchool] = React.useState('');
+  const [school, setSchool] = React.useState("");
   const [district, setDistrict] = React.useState(
     districts[0] || "Select District"
   );
@@ -35,19 +35,19 @@ function StudentRegistration() {
   const [age, setAge] = React.useState(0);
 
   //college list
-  var list=["College of Engineering, Trivandrum","Model Engineering College","Mar Athanasius College of Engineering"];
+  var list = [
+    "College of Engineering, Trivandrum",
+    "Model Engineering College",
+    "Mar Athanasius College of Engineering",
+  ];
 
   //function to setSchool
   useEffect(() => {
     getSchools().then((res) => {
-      
       setSchools(res);
-      setSchool( res[0]);
+      setSchool(res[0]);
     });
   }, []);
-
-
-  
 
   //Function to Calculate age and setAge
   function calculateAge(birthdate) {
@@ -104,8 +104,8 @@ function StudentRegistration() {
       toast.error("Address is required");
       return;
     }
-    if (idcard === undefined) {
-      toast.error("ID Card is required");
+    if (photo === undefined) {
+      toast.error("Photo is required");
       return;
     }
     if (aadhar === undefined) {
@@ -145,16 +145,15 @@ function StudentRegistration() {
       district: district,
       bio: bio,
       address: address,
-      id_card: 'idcard',
-      resume: 'resume',
-      aadhar_card: 'aadhar',
-      consent: 'consent',
-      school_id: school._id
-    } 
-    console.log(data)
+      id_card: "idcard",
+      resume: "resume",
+      aadhar_card: "aadhar",
+      consent: "consent",
+      school_id: school._id,
+    };
+    console.log(data);
     await handleRegister(data, "student");
     handleReset();
- 
   };
   const handleReset = () => {
     setName("");
@@ -176,6 +175,7 @@ function StudentRegistration() {
     document.getElementById("aadhar").value = "";
     document.getElementById("consent").value = "";
     document.getElementById("resume").value = "";
+    document.getElementById("studentPhoto").value = "";
   };
   return (
     <>
@@ -337,7 +337,9 @@ function StudentRegistration() {
                       }}
                     >
                       {schools?.map((school) => (
-                        <option value={JSON.stringify(school)}>{school.name}</option>
+                        <option value={JSON.stringify(school)}>
+                          {school.name}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -419,7 +421,7 @@ function StudentRegistration() {
                 <div
                   className={styles.registration__form__section__field__label}
                 >
-                  School ID Card*
+                  School ID Card
                 </div>
                 <div
                   className={styles.registration__form__section__field__input}
@@ -494,6 +496,24 @@ function StudentRegistration() {
                   </div>
                 </div>
               )}
+              <div className={styles.registration__form__section__field}>
+                <div
+                  className={styles.registration__form__section__field__label}
+                >
+                  Photo*
+                </div>
+                <div
+                  className={styles.registration__form__section__field__input}
+                >
+                  <input
+                    type="file"
+                    id="studentPhoto"
+                    onChange={(e) => {
+                      setPhoto(e.target.files[0]);
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div className={styles.registration__form__register}>

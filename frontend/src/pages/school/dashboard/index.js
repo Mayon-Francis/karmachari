@@ -121,7 +121,7 @@ function SchoolDashboard() {
             <div className={styles.jobDescription__container_header}>
               Available Jobs
             </div>
-            {loading ? (
+            {!loading ? (
               <div
                 style={{
                   display: "flex",
@@ -131,7 +131,7 @@ function SchoolDashboard() {
                   width: "100%",
                 }}
               >
-                <ClipLoader color="#00487c" loading={loading} size={50} />
+                <ClipLoader color="#00487c" loading={!loading} size={50} />
               </div>
             ) : (
               <div className={styles.jobCards__container_1}>

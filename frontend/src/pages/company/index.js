@@ -13,7 +13,6 @@ function CompanyLogin() {
       <div className={styles.login_container}>
         <div className={styles.login_container__left}>
           <Lottie
-            style={{ width: "50vw" }}
             animationData={userlanding}
             loop={true}
           />
