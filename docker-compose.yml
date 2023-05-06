@@ -3,7 +3,7 @@ version: "3.8"
 services:
   karmachari_frontend:
     container_name: karmachari_frontend
-    build: 
+    build:
       context: ./frontend
       dockerfile: ../Dockerfile.frontend
     ports:
@@ -22,7 +22,7 @@ services:
 
   karmachari_backend:
     container_name: karmachari_backend
-    build: 
+    build:
       context: ./backend
       dockerfile: ../Dockerfile.backend
     ports:
@@ -38,29 +38,30 @@ services:
     #   - mongo
     #   - minio
 
-#   karmachari_db:
-#     container_name: karmachari_db
-#     image: mongo:latest
-#     ports:
-#       - "27017:27017"
-#     volumes:
-#       - mongo-data:/data/db
-#     environment:
-#       - MONGO_INITDB_ROOT_USERNAME=root
-#       - MONGO_INITDB_ROOT_PASSWORD=example
-#       - MONGO_INITDB_DATABASE=mydb
+  karmachari_db:
+    container_name: karmachari_db
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+      - MONGO_INITDB_DATABASE=mydb
 
-#   karmachari_minio:
-#     container_name: karmachari_minio
-#     image: minio/minio:latest
-#     ports:
-#       - "9000:9000"
-#     environment:
-#       MINIO_ACCESS_KEY: "myaccesskey"
-#       MINIO_SECRET_KEY: "mysecretkey"
-#     volumes:
-#       - minio-data:/data
+  # karmachari_minio:
+  #   container_name: karmachari_minio
+  #   image: minio/minio:latest
+  #   ports:
+  #     - "9000:9000"
+  #     - "9090:9090"
+  #   environment:
+  #     MINIO_ROOT_USER: "myaccesskey"
+  #     MINIO_ROOT_PASSWORD: "mysecretkey"
+  #   volumes:
+  #     - minio-data:/data
 
-# volumes:
-#   mongo-data:
-#   minio-data:
+volumes:
+  mongo-data:
+  # minio-data:
