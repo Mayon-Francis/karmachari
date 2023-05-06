@@ -10,7 +10,8 @@ services:
       - "3000:80"
     depends_on:
       - karmachari_backend
-      # - mongo
+      - karmachari_db
+      - karmachari_storage
 
   karmachari_backend:
     container_name: karmachari_backend
@@ -19,9 +20,9 @@ services:
       dockerfile: ../Dockerfile.backend
     ports:
       - "4000:4000"
-    # depends_on:
-    #   - mongo
-    #   - minio
+    depends_on:
+      - karmachari_db
+      - karmachari_storage
 
   karmachari_db:
     container_name: karmachari_db
@@ -35,18 +36,19 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=example
       - MONGO_INITDB_DATABASE=mydb
 
-  # karmachari_minio:
-  #   container_name: karmachari_minio
-  #   image: minio/minio:latest
-  #   ports:
-  #     - "9000:9000"
-  #     - "9090:9090"
-  #   environment:
-  #     MINIO_ROOT_USER: "myaccesskey"
-  #     MINIO_ROOT_PASSWORD: "mysecretkey"
-  #   volumes:
-  #     - minio-data:/data
+  karmachari_storage:
+    container_name: karmachari_storage
+    image: minio/minio:latest
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: "karmachari"
+      MINIO_ROOT_PASSWORD: "minioadmin"
+    volumes:
+      - minio-data:/data
+    command: server --console-address ":9001" /data
 
 volumes:
   mongo-data:
-  # minio-data:
+  minio-data:
