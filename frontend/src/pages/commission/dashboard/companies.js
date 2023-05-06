@@ -54,7 +54,7 @@ function CompaniesList() {
     <>
       <CustomTitle title="Companies" />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>COMPANIES</div>
+        <div className={styles.registration__heading}>EMPLOYER</div>
         <div className={styles.jobDescription__container_inner}>
           <div>
             <DataGrid

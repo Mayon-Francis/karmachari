@@ -15,7 +15,7 @@ function CommissionLogin() {
         </div>
         <div className={styles.login_container__right}>
         <div className={styles.login_container_right_heading}>
-            Commission Login
+            Official Login
           </div>
           <LoginCard />
         </div>

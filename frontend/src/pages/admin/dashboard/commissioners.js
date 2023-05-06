@@ -90,7 +90,7 @@ function CommissionersList() {
     <>
       <CustomTitle title="Commissioners" />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>COMMISSIONERS</div>
+        <div className={styles.registration__heading}>OFFICIAL</div>
         <div className={styles.jobDescription__container_inner}>
           {loading ? (
             <div

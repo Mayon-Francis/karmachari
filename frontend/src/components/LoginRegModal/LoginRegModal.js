@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 
 function LoginRegModal({ open, handleClose }) {
   const [login, setLogin] = useState("");
-  const logins = ["Others","school", "commission", "admin"];
+  const logins = ["Others","School/College", "Official", "admin"];
   const router = useRouter();
 
   const handleChange = (event) => {
@@ -79,7 +79,7 @@ function LoginRegModal({ open, handleClose }) {
                 router.push("/company");
               }}
             >
-              Company
+              Employer
             </div>
             <div style={{ width: "150px", textAlign: "center" }}>
               {/* <FormControl fullWidth size="small">
