@@ -1,0 +1,60 @@
+.newJobCard {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #4bb3fd;
+  border-radius: 10px;
+  padding: 1rem;
+  gap: 1rem;
+  width: 385px;
+  align-items: center;
+}
+.newJobCard__image img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.newJobCard__bookmark {
+  align-self: flex-start;
+  font-size: 1.5rem;
+
+  cursor: pointer;
+  color: #4bb3fd;
+}
+.newJobCard__info__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.newJobCard__info {
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  gap: 0.25rem;
+}
+.newJobCard__info__company {
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #00487c;
+}
+.newJobCard__info__location {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+@media (max-width: 508px) {
+  .newJobCard {
+    width: 100%;
+  }
+}

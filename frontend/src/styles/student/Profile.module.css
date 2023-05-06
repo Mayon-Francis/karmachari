@@ -1,0 +1,276 @@
+.my_profile_container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+.profile_board {
+  background: linear-gradient(
+    180deg,
+    #4bb3fd 0%,
+    rgba(75, 179, 253, 0.836231) 0%,
+    #c9e9ff 100%
+  );
+  padding: 2.5rem;
+  display: flex;
+  color: #000000;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 100vh;
+}
+.edit__pro_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1.25rem;
+  padding: 3rem;
+  padding-bottom: 6rem;
+
+  position: relative;
+}
+.pro_image_container {
+  display: flex;
+  justify-content: center;
+}
+.edit_board {
+  height: 100vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_image {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 15rem;
+}
+.profile_details_header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile_details_header_name {
+  font-weight: 700;
+  font-size: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+.profile_details_container a {
+  text-decoration: none;
+  color: #000000;
+}
+.change-in-edit {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.4rem;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.profile_details_container a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+.profile_details_container {
+  font-size: 1.4rem;
+  align-items: center;
+}
+.phone_class {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+}
+.profile_phone {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 29px;
+}
+
+.edit__pro_box_1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.edit__header {
+  display: flex;
+  flex-direction: row;
+}
+.edit__pro_abtMe,
+.edit__pro_projects,
+.edit__pro_skls,
+.edit__pro_achvmts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 42px;
+  color: #00487c;
+
+  padding-top: 1rem;
+}
+.edit__pro_projects {
+  padding: 3rem;
+  justify-content: center;
+}
+.developer_details_body_right_content_projects_1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  gap: 30px;
+  justify-content: center;
+}
+.edit__pro_abtMe_bx,
+.edit__pro_achvmts_bx {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 400;
+  padding: 1.2rem;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  color: #000000;
+  justify-content: center;
+  background: #ffffff;
+  border: 0.4px solid #00487c;
+  border-radius: 10px;
+  width: 80%;
+  min-height: 3rem;
+}
+.edit__pro_skls_bx {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 0.4px solid #00487c;
+  border-radius: 10px;
+  padding: 10px;
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+
+  color: #000000;
+  width: 80%;
+}
+.skill {
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #000000;
+}
+
+/*Button group Applied Jobs and Status*/
+
+.box_below_buttongroup{
+
+  margin-top: 50px;
+}
+
+.button_group{
+  height: 50px;
+
+  position: absolute;
+  top: 20px;
+ 
+}
+
+.selected_item{
+  height: max-content;
+}
+
+
+
+.applied_job_button {
+  width: 360px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #4bb3fd;
+  box-shadow: inset 0px 4px 4px rgba(21, 90, 143, 0.5);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.applied_job_button:hover {
+  background-color: #023457;
+}
+
+
+
+@media (min-device-width: 20px) and (max-device-width: 500px) {
+  .my_profile_container {
+    flex-direction: column;
+  }
+  .profile_details_header .p {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 1300px) {
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1100px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 860px) {
+  .my_profile_container {
+    flex-direction: column;
+  }
+  .profile_board {
+    position: relative;
+  }
+  .edit__pro_box {
+    padding: 0rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+}
+
+@media only screen and (device-width: 768px) {
+}

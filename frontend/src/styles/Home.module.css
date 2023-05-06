@@ -1,0 +1,362 @@
+.loginCard__body__button {
+
+  width: 230px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  background: #00487c;
+  box-shadow: inset 0px 4px 4px rgba(75, 179, 253, 0.5);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.loginCard__body__button:hover {
+  background-color: #023457;
+}
+
+.registration__heading__container{
+  display: flex;
+
+  margin-top: 2rem;
+}
+
+.registration__heading {
+  background-image: url("../assets/images/homepage.png");
+  background-repeat: no-repeat;
+  width: 62px;
+  height: 63px;
+  margin-right: 1rem;
+}
+
+.registration__heading__text{
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  /* identical to box height */
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  background: linear-gradient(180deg, #027BCE 0%, #00487C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+ }
+
+.content__container {
+  margin-top: 6rem;
+  /* width: 100vw; */
+}
+.homepage__continueButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.section__heading {
+  /* width: 100vw; */
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px #c9e9ff;
+}
+
+.section__content {
+  display: flex;
+  margin: 1rem 3rem 0rem 3rem;
+}
+
+.content__updates {
+  order: 2;
+  background: #cdebff;
+  border: 2px solid #4bb3fd;
+  border-radius: 20px;
+  width: 20rem;
+  height: 26rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.updates__heading {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #00487c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.content__main {
+  margin: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.content__heading,.content__heading__contact {
+  /* text-align: center; */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #00487c;
+}
+
+.content__heading__contact{
+text-align: center;
+}
+
+ 
+.accordion__container {
+}
+
+.accordion__summary {
+  background: #ffffff !important;
+  border: 1px solid #4bb3fd !important;
+  border-radius: 10px !important;
+}
+
+.accordion__details {
+  background: linear-gradient(
+    0deg,
+    rgba(75, 179, 253, 0.5) 0%,
+    rgba(75, 179, 253, 0) 104.03%
+  ) !important;
+  border-radius: 10px !important;
+}
+
+.accordion__root {
+  box-shadow: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+.content__contact {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.content__contactform {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #4bb3fd;
+  border-radius: 5px;
+}
+
+.contact_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sendButton {
+  margin: 1rem !important;
+  align-self: flex-end !important;
+  width: 107px !important;
+  height: 44px !important;
+  background: linear-gradient(180deg, #027bce 0%, #00487c 100%) !important;
+  box-shadow: inset 0px 4px 4px #4bb3fd !important;
+  border-radius: 10px !important;
+}
+
+.form_heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 6px;
+  line-height: 18px;
+  color: #00487c;
+}
+
+.form_input {
+  box-sizing: border-box;
+  border: 0.3px solid #74acd4;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  resize: none;
+  padding: 0.75rem;
+}
+
+.form_input_container {
+  margin: 1rem;
+}
+
+.ticker_item {
+  font-size: 1rem;
+  color: #00487c;
+  font-weight: 600;
+}
+
+.notification_dot {
+  height: 11px;
+  width: 11px;
+  display: inline-block;
+  background-color: #3780b4;
+  border-radius: 100%;
+  position: relative;
+}
+.notification {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+.updates__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: 2rem;
+  row-gap: 1rem;
+}
+
+.content__aboutus{
+  order: 1;
+  object-fit: contain;
+  width: 50vw;
+  font-size: 18px;
+}
+
+.content__faq{
+  order: 3;
+  width: 50vw;
+}
+
+.content__updates{
+  order: 2;
+   width: 22vw;
+}
+
+.content__contact{
+  order: 4;
+  width: 22vw;
+  margin-left: auto;
+}
+
+.content__updates__container{
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+  .content__aboutus{
+    width: unset;
+    order: 2;
+    margin: 0 2rem 0 2rem;
+  }
+
+  .content__faq{
+    order: 3;
+    width: unset;
+    margin: 0 2rem 0 2rem;
+  }
+
+  .content__updates{
+    order: 1;
+    width: unset;
+    margin: 3rem 2rem 0 2rem;
+  }
+
+  .content__contact{
+    width: unset;
+    order: 4;
+    margin: 0 2rem 2rem 2rem;
+  }
+
+  .content__updates__container{
+    margin: 0 2rem 0 2rem;
+  }
+
+  .loginCard__body__button{
+    width: 120px;
+    height: 60px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+
+  .content__faq {
+    width: unset;
+  }
+
+  .section__content {
+    margin: 0rem;
+    flex-direction: column-reverse;
+  }
+
+  .accordion__container {
+    width: 100%;
+  }
+
+  .content__updates {
+    /* margin: 2rem; */
+    width: unset;
+  }
+
+  .content__main {
+    margin: 0;
+    display: flex;  
+    flex-direction: column;
+    justify-content:flex-end;
+  }
+  .section__heading {
+    margin: 0rem;
+  }
+  .section__content {
+    margin: 0;
+  }
+
+  .registration__heading{
+    transform: scale(0.8);
+    margin-right: unset;
+    
+  }
+
+  .registration__heading__container{
+    align-items: center;
+  }
+
+  .registration__heading__text {
+   font-size: 30px;
+   width: 250px;
+   text-align: center;
+  }
+  .homepage__continueButtons,
+  .content__main {
+  }
+}

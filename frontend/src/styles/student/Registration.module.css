@@ -1,0 +1,245 @@
+.registration__container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+  align-items: center;
+  gap: 3rem;
+}
+.registration__heading {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #00487c;
+}
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  gap: 3rem;
+}
+.registration__form__section {
+  display: flex;
+  flex-direction: column;
+}
+.registration__form__section__heading {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  background: #c9e9ff;
+  box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.2);
+  border-radius: 10px 10px 0px 0px;
+  color: #00487c;
+  padding: 1rem;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registration__form__section__fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #4bb3fd;
+  border-radius: 0px 20px 20px 20px;
+}
+.registration__form__section__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.registration__form__section__field__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #00487c;
+}
+.registration__form__section__field__input input {
+  border: 0.3px solid #00487c;
+  border-radius: 15px;
+  padding: 0.75rem;
+  outline: none;
+  width: 300px;
+  font-family: "Mulish", sans-serif;
+}
+.registration__form__section__field__input textarea {
+  border: 0.3px solid #00487c;
+  border-radius: 15px;
+  padding: 0.75rem;
+  outline: none;
+  width: 300px;
+  resize: none;
+  font-family: "Mulish", sans-serif;
+}
+.registration__form__section__field__input select {
+  border: 0.3px solid #00487c;
+  border-radius: 15px;
+  padding: 0.75rem;
+  outline: none;
+  width: 300px;
+  font-family: "Mulish", sans-serif;
+  background-color: white;
+}
+
+.registration__form__section__field__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.registration__form__section__field__note {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #00487c;
+}
+.registration__form__register__button {
+  background: linear-gradient(180deg, #027bce 0%, #00487c 100%);
+  box-shadow: inset 0px 4px 4px #4bb3fd;
+  border-radius: 10px;
+  width: 180px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+}
+.registration__form__register__button:hover {
+  background: linear-gradient(180deg, #00487c 0%, #027bce 100%);
+}
+.registration__form__register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.registration__form__register
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.jobDescription__container_inner {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid #4bb3fd;
+  gap: 2rem;
+  border-radius: 20px;
+  width: 60vw;
+}
+.registration__button {
+  background: linear-gradient(180deg, #027bce 0%, #00487c 100%);
+  box-shadow: inset 0px 4px 4px #4bb3fd;
+  border-radius: 10px;
+  width: 80px;
+  height: 34px;
+  outline: none;
+  border: none;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Mulish", sans-serif;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+}
+.registration__button:hover {
+  background: linear-gradient(180deg, #00487c 0%, #027bce 100%);
+}
+
+.registration__button__verified {
+  background: linear-gradient(180deg, #02ce4d 0%, #007c2d 100%);
+  box-shadow: inset 0px 4px 4px #4bfd7a;
+  border-radius: 10px;
+  width: 80px;
+  height: 34px;
+  outline: none;
+  border: none;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+
+.viewStudentProfile__button{
+  background: linear-gradient(180deg, #027bce 0%, #00487c 100%);
+  box-shadow: inset 0px 4px 4px #4bb3fd;
+  border-radius: 10px;
+  width: 80px;
+  height: 34px;
+  outline: none;
+  border: none;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Mulish", sans-serif;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+}
+
+
+@media (max-width: 1400px) {
+  .jobDescription__container_inner {
+    width: 50vw;
+  }
+}
+@media (max-width: 1024px) {
+  .jobDescription__container_inner {
+    margin: 1.1rem;
+  }
+  .jobDescription__container_inner {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .registration__form {
+    width: 100%;
+  }
+  .registration__form__section__field__input input {
+    width: 70vw;
+  }
+  .registration__form__section__field__input select {
+    width: 70vw;
+  }
+  .registration__form__section__field__input textarea {
+    width: 70vw;
+  }
+}
