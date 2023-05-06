@@ -207,6 +207,36 @@ function StudentNavbar() {
               ) : (
                 ""
               )}
+                                <MenuItem
+                    onClick={() => {
+                      if (router.pathname.includes("/admin")) {
+                        router.push("/admin/dashboard/inquiries");
+                      }
+                      // } else if (router.pathname.includes("/commission")) {
+                      //   router.push("/commission/dashboard/inquiries");
+                      // }
+                    }}
+                    style={{
+                      color: "#00487c",
+                    }}
+                  >
+                    View Inquiries
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      if (router.pathname.includes("/admin")) {
+                        router.push("/admin/dashboard/statistics");
+                      }
+                      // } else if (router.pathname.includes("/commission")) {
+                      //   router.push("/commission/dashboard/inquiries");
+                      // }
+                    }}
+                    style={{
+                      color: "#00487c",
+                    }}
+                  >
+                    Statistics
+                  </MenuItem>
               <MenuItem
                 onClick={() => {
                   if (router.pathname.includes("/admin")) {
@@ -218,7 +248,7 @@ function StudentNavbar() {
                   } else if (router.pathname.includes("/school")) {
                     router.push("/school/profile");
                   } else if (router.pathname.includes("/student")) {
-                    router.push("/student/profile");
+                    router.push("/student/dashboard");
                   }
                 }}
                 style={{
@@ -238,6 +268,7 @@ function StudentNavbar() {
               >
                 Logout
               </MenuItem>
+              
             </Menu>
           ) : (
             <div className={styles.buttons}>
