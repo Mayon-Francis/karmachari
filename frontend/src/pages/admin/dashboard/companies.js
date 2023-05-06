@@ -125,7 +125,7 @@ function CompaniesList() {
       <CustomTitle title="Companies" />
       <ViewCompanyProfileModal open={open} handleClose={handleClose} />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>COMPANIES</div>
+        <div className={styles.registration__heading}>EMPLOYER</div>
         <div className={styles.jobDescription__container_inner}>
           {loading ? (
             <div
