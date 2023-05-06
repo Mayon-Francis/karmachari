@@ -1,18 +1,5 @@
 # Karmachari Job Portal Backend
 
-### [Frontend Repo](https://github.com/Techlance-io/karmachari)
-
-## Getting Started
-
-### Make Sure the .env file is present in the root directory of the project.
-
-```bash
-git clone <url of your forked repo>
-cd karmachari-backend
-npm install
-npm start
-```
-
 <!-- ## Routes
 
 - `/` - Home

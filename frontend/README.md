@@ -1,18 +1,5 @@
 # Karmachari Job Portal
 
-### [Backend Repo](https://github.com/Techlance-io/karmachari-backend)
-
-## Getting Started
-
-### Make sure you run the backend server first.
-
-```bash
-git clone <url of your forked repo>
-cd karmachari
-npm install
-npm run dev
-```
-
 ## Routes
 
 - `/` - Home
