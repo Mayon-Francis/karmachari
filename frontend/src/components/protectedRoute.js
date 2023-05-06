@@ -7,7 +7,8 @@ export default function profile(props) {
   const router = useRouter();
   const { user, userLoading, loading,userData,userError, logout } = useContext(UserContext);
  useEffect(() => {
-  if(router && userData && router.pathname.split("/")[1] != userData?.roLe){
+  // if(router && userData && router.pathname.split("/")[1] != userData?.roLe){
+  if(router && userData && router.pathname.split("/")[1] != userData?.roLe && router.pathname != "/" && router.pathname != "/grievances"){
     router.push("/"+userData?.roLe+"/dashboard");
   }
   else if (router &&

@@ -17,7 +17,7 @@ import LoginRegModal from "@/components/LoginRegModal/LoginRegModal";
 export default function Home() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const { user, userLoading } = useContext(UserContext);
+  const { user, userLoading, userData,userError, logout } = useContext(UserContext);
 
   const [open, setOpen] = useState(false);
 
@@ -55,7 +55,17 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.homepage__continueButtons}>
-            <div
+
+            {userData ? <div
+              className={styles.loginCard__body__button}
+              onClick={() => {
+                // router.push("/student");
+                router.push("/"+userData?.roLe+"/dashboard");
+              }}
+            >
+              View dashboard
+            </div>:
+              <div
               className={styles.loginCard__body__button}
               onClick={() => {
                 // router.push("/student");
@@ -63,7 +73,7 @@ export default function Home() {
               }}
             >
               Login to Continue
-            </div>
+            </div>}
             {/* <div
               className={styles.loginCard__body__button}
               onClick={() => {

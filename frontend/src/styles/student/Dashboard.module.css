@@ -4,6 +4,7 @@
   justify-content: center;
   top: 10px;
   gap: 1.5rem;
+  flex-grow: 1;
 }
 .jobCards__container_1 {
   display: flex;
@@ -245,7 +246,7 @@
 
   .studentDashboard__content {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     flex-wrap: wrap;
   }
 
