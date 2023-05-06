@@ -10,8 +10,8 @@ function SchoolLogin() {
     <>
       <CustomTitle title="School Login" />
       <div className={styles.login_container}>
-        <div className={styles.login_container__left}>
-          <Lottie style={{width:"40vw"}}  animationData={userlanding} loop={true} />
+        <div className={styles.login_container__left__comm}>
+          <Lottie animationData={userlanding} loop={true} />
         </div>
         <div className={styles.login_container__right}>
         <div className={styles.login_container_right_heading}>
