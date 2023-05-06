@@ -21,7 +21,7 @@ function CompanyLogin() {
 
         <div className={styles.login_container__right}>
           <div className={styles.login_container_right_heading}>
-            Company Login
+            Employer Login
           </div>
           <LoginCard />
         </div>

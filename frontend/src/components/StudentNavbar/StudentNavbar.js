@@ -151,7 +151,7 @@ function StudentNavbar() {
                     color: "#00487c",
                   }}
                 >
-                  View Schools
+                  View School/College
                 </MenuItem>
               ) : (
                 ""
@@ -171,7 +171,7 @@ function StudentNavbar() {
                       color: "#00487c",
                     }}
                   >
-                    View Companies
+                    View Employer
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
@@ -202,7 +202,7 @@ function StudentNavbar() {
                     color: "#00487c",
                   }}
                 >
-                  View Commissioners
+                  View Official
                 </MenuItem>
               ) : (
                 ""
@@ -445,7 +445,7 @@ function StudentNavbar() {
                           }}
                           className={styles.navbar_link}
                         >
-                          View Schools
+                          View School/College
                         </div>
                       ) : (
                         ""
@@ -466,7 +466,7 @@ function StudentNavbar() {
                             }}
                             className={styles.navbar_link}
                           >
-                            View Companies
+                            View Employer
                           </div>
                           <div
                             onClick={() => {
@@ -497,7 +497,7 @@ function StudentNavbar() {
                           }}
                           className={styles.navbar_link}
                         >
-                          View Commissioners
+                          View Official
                         </div>
                       ) : (
                         ""
