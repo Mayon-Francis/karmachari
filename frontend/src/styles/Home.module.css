@@ -277,25 +277,25 @@ text-align: center;
   .content__aboutus{
     width: unset;
     order: 2;
-    margin: 0 2rem 0 2rem;
+    margin: 3rem 2rem 0 2rem;
   }
 
   .content__faq{
     order: 3;
     width: unset;
-    margin: 0 2rem 0 2rem;
+    margin: 4rem 0 0 0 ;
   }
 
   .content__updates{
     order: 1;
     width: unset;
-    margin: 3rem 2rem 0 2rem;
+    margin: 4rem 2rem 0 2rem;
   }
 
   .content__contact{
     width: unset;
     order: 4;
-    margin: 0 2rem 2rem 2rem;
+    margin: 3rem 2rem 2rem 2rem;
   }
 
   .content__updates__container{

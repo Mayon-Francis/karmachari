@@ -191,7 +191,7 @@ export default function Home() {
             </section>
             </section>
             
-            <div className={styles.content__updates}>
+            <div className={styles.content__updates} id="updates">
               <div className={styles.updates__heading}>LATEST UPDATES</div>
               <div className={styles.updates__content}>
                 <div className={styles.notification}>
