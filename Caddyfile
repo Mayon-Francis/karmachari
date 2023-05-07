@@ -1,0 +1,26 @@
+# comment if we should handle https
+{
+	auto_https off
+}
+# ********
+
+# If handle tls, switch to https
+http://api.{$BASE_URL} {
+	reverse_proxy http://karmachari_backend:4000
+}
+
+http://s3.{$BASE_URL} {
+	reverse_proxy http://karmachari_storage:9000
+}
+
+http://s3-console.{$BASE_URL} {
+	reverse_proxy http://karmachari_storage:9001
+}
+
+http://www.{$BASE_URL} {
+	reverse_proxy http://karmachari_frontend:80
+}
+
+http://{$BASE_URL} {
+	reverse_proxy http://karmachari_frontend:80
+}

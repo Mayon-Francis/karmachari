@@ -1,0 +1,27 @@
+FROM node:18-alpine
+
+WORKDIR /app
+ARG GIT_BRANCH
+ARG GIT_URL
+
+ENV GIT_BRANCH=$GIT_BRANCH
+ENV GIT_URL=$GIT_URL
+
+RUN apk add --no-cache git
+RUN apk add --no-cache git-crypt
+RUN apk add --no-cache gnupg
+
+RUN npm install -g pm2
+
+WORKDIR /app
+ARG CACHEBUST=1
+RUN git clone ${GIT_URL} .
+RUN git checkout ${GIT_BRANCH}
+
+COPY .git-crypt-key .git-crypt-key
+RUN git-crypt unlock /app/.git-crypt-key
+
+WORKDIR /app/backend
+RUN npm install
+
+CMD (pm2 start ecosystem.config.js) && pm2 logs

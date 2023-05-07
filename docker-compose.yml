@@ -1,0 +1,83 @@
+version: "3.8"
+
+services:
+  karmachari_proxy:
+    container_name: karmachari_proxy
+    image: caddy:2-alpine
+    restart: always
+    ports:
+      - "80:80"
+
+      # uncomment if we should handle tls
+      # - "443:443"
+    environment:
+      - BASE_URL=${BASE_URL}
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data_karmachari:/data
+      - caddy_config_karmachari:/config
+    depends_on:
+      - karmachari_frontend
+      - karmachari_backend
+      - karmachari_db
+      - karmachari_storage
+
+  karmachari_frontend:
+    container_name: karmachari_frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.prod.frontend
+      args:
+        - GIT_BRANCH=${GIT_BRANCH}
+        - GIT_URL=${GIT_URL}
+    environment:
+      - GIT_BRANCH=${GIT_BRANCH}
+      - GIT_URL=${GIT_URL}
+      - NODE_ENV=${NODE_ENV}
+    depends_on:
+      - karmachari_backend
+      - karmachari_db
+      - karmachari_storage
+
+  karmachari_backend:
+    container_name: karmachari_backend
+    build:
+      context: .
+      dockerfile: Dockerfile.prod.backend
+      args:
+        - GIT_BRANCH=${GIT_BRANCH}
+        - GIT_URL=${GIT_URL}
+    environment:
+      - GIT_BRANCH=${GIT_BRANCH}
+      - GIT_URL=${GIT_URL}
+      - NODE_ENV=${NODE_ENV}
+    depends_on:
+      - karmachari_db
+      - karmachari_storage
+
+  karmachari_db:
+    container_name: karmachari_db
+    image: mongo:latest
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - 27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+
+  karmachari_storage:
+    container_name: karmachari_storage
+    image: minio/minio:latest
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+    volumes:
+      - minio-data:/data
+    command: server --console-address ":9001" /data
+
+volumes:
+  mongo-data:
+  minio-data:
+  caddy_config_karmachari:
+  caddy_data_karmachari:
