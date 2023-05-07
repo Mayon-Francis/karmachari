@@ -6,6 +6,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { toast } from "react-hot-toast";
 import { getSchools, handleLogin } from "@/utils/requests";
 import { handleRegister } from "@/utils/requests";
+import { FormControl,FormLabel,RadioGroup,FormControlLabel,Radio } from "@mui/material";
 
 function StudentRegistration() {
   //personal details
@@ -16,6 +17,10 @@ function StudentRegistration() {
   const [phone, setPhone] = React.useState("");
   const [emergency, setEmergency] = React.useState("");
   const [email, setEmail] = React.useState("");
+
+  //gender
+  const[gender,setGender]=React.useState(" ");
+  console.log(gender);
 
   //Academic Details
   const [schools, setSchools] = React.useState([]);
@@ -66,6 +71,11 @@ function StudentRegistration() {
     return age;
   }
 
+  //Function to set Gender
+  const handleGender=(event)=>{
+    setGender(event.target.value);
+  }
+
   const handleSubmit = async () => {
     if (name === "") {
       toast.error("Name is required");
@@ -91,6 +101,10 @@ function StudentRegistration() {
       toast.error("Email is required");
       return;
     }
+    if(gender===" "){
+      toast.error("Gender is required");
+      return;
+    }
     if (school === "Select School") {
       toast.error("School is required");
       return;
@@ -99,6 +113,7 @@ function StudentRegistration() {
       toast.error("District is required");
       return;
     }
+
     if (address === "") {
       toast.error("Address is required");
       return;
@@ -115,6 +130,7 @@ function StudentRegistration() {
       toast.error("Consent is required");
       return;
     }
+    
 
     console.log({
       name: name,
@@ -297,7 +313,26 @@ function StudentRegistration() {
                   />
                 </div>
               </div>
+              <div className={styles.registration__form__section__field}>
+                <FormControl>                  
+                  <FormLabel id="gender-radio-buttons-group-label"  >
+                    Gender*
+                  </FormLabel>
+                  <RadioGroup
+                    row
+                    aria-labelledby="gender-radio-buttons-group-label"
+                    name="gender-radio-buttons-group"
+                    value={gender}
+                    onChange={handleGender}
+                  >
+                    <FormControlLabel value="female" control={<Radio />} label="Female" />
+                    <FormControlLabel value="male" control={<Radio />} label="Male" />
+                    <FormControlLabel value="other" control={<Radio />} label="Other" />
+                  </RadioGroup>
+                </FormControl>
+              </div>
             </div>
+
           </div>
           <div className={styles.registration__form__section}>
             <div className={styles.registration__form__section__heading}>

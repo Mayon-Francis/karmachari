@@ -143,7 +143,7 @@ function ViewStudentProfileModal({ open, handleClose }) {
                 />
               </div>
             </div>
-            <div className={styles.field}>
+            {/* <div className={styles.field}>
               <div className={styles.input__label}>Documents</div>
               <div className={styles.loginCard__body__title__text__text__input}>
                 <div className={styles.studentProfile__documents}>
@@ -177,7 +177,7 @@ function ViewStudentProfileModal({ open, handleClose }) {
                   
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <div className={styles.field}>
               <div className={styles.input__label}>District</div>
               <div className={styles.loginCard__body__title__text__text__input}>
