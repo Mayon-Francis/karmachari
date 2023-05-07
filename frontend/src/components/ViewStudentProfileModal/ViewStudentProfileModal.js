@@ -143,6 +143,24 @@ function ViewStudentProfileModal({ open, handleClose }) {
                 />
               </div>
             </div>
+            <div className={styles.field}>
+              <div className={styles.input__label}>Documents</div>
+
+              <div className={styles.loginCard__body__title__text__text__input}>
+                <div className={styles.studentProfile__documents}>
+                <div>
+                    <div className={styles.studentProfile__document__heading}>Resume</div>
+                    <div
+                      className={styles.studentProfile__documents__view}
+                      onClick={() => {}}
+                    >
+                      View <AiFillEye />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
             {/* <div className={styles.field}>
               <div className={styles.input__label}>Documents</div>
               <div className={styles.loginCard__body__title__text__text__input}>
@@ -177,7 +195,7 @@ function ViewStudentProfileModal({ open, handleClose }) {
                   
                 </div>
               </div>
-            </div> */}
+            </div>  */}
             {/* <div className={styles.field}>
               <div className={styles.input__label}>District</div>
               <div className={styles.loginCard__body__title__text__text__input}>
@@ -196,7 +214,7 @@ function ViewStudentProfileModal({ open, handleClose }) {
                     <option value="Work from Home" onSelect={()=>{setJobType("Work from Home")}}>Work from Home</option>
                 </select>
               </div>
-            </div> */}
+            </div>
           </div>
           <div className={styles.registration__form__register}>
             {/* <div
