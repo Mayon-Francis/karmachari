@@ -29,7 +29,7 @@ function CommissionersList() {
       handleFetch(user.accessToken, "admin/commission?verified=all").then(
         (res) => {
           res = res.map((item, index) => {
-            return { id: index+1, ...item };
+            return { id: index + 1, ...item };
           });
           console.log(res);
           setData(res);
@@ -90,7 +90,7 @@ function CommissionersList() {
     <>
       <CustomTitle title="Commissioners" />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>OFFICIAL</div>
+        <div className={styles.registration__heading}>OFFICIALS</div>
         <div className={styles.jobDescription__container_inner}>
           {loading ? (
             <div

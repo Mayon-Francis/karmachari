@@ -84,7 +84,7 @@ const putStudent = asyncHandler(async (req, res) => {
     .findByIdAndUpdate(req.body._id, { verified: true }, { new: true })
     .then((updatedData) => {
       mailer(updatedData, "student")
-      res.status(200).json({data:updatedData, message:"successfully verified"});
+      res.status(200).json({data:updatedData, message:"Successfully Verified"});
     })
     .catch((error) => {
       res.status(500);

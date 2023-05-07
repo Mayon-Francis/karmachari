@@ -8,12 +8,17 @@ import { useRouter } from "next/router";
 import DeleteConfirmationModal from "../DeleteConfirmationModal/DeleteConfirmationModal";
 import EditJobModal from "../EditJobModal/EditJobModal";
 
-function NewJobCard({openEdit, job}) {
+function NewJobCard({ job }) {
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
+  const [openEdit, setOpenEdit] = React.useState(false);
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleEditClose = () => {
+    setOpenEdit(false);
   };
 
   return (
@@ -27,7 +32,9 @@ function NewJobCard({openEdit, job}) {
         </div>
         <div className={styles.newJobCard__info}>
           <div className={styles.newJobCard__info__title}>{job?.role}</div>
-          <div className={styles.newJobCard__info__company}>{job?.company_name}</div>
+          <div className={styles.newJobCard__info__company}>
+            {job?.company_name}
+          </div>
           <div className={styles.newJobCard__info__location}>
             {job?.location}
           </div>
@@ -43,7 +50,12 @@ function NewJobCard({openEdit, job}) {
               }}
             />
             {router.pathname.includes("company") && (
-              <FaRegEdit className={styles.newJobCard__bookmark} onClick={()=>{openEdit()}} />
+              <FaRegEdit
+                className={styles.newJobCard__bookmark}
+                onClick={() => {
+                  setOpenEdit(true);
+                }}
+              />
             )}
           </>
         ) : (
@@ -53,6 +65,7 @@ function NewJobCard({openEdit, job}) {
         )}
       </div>
       <DeleteConfirmationModal open={open} handleClose={handleClose} />
+      <EditJobModal open={openEdit} handleClose={handleEditClose} job={job} />
     </>
   );
 }

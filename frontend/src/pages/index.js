@@ -63,7 +63,7 @@ export default function Home() {
                 router.push("/"+userData?.roLe+"/dashboard");
               }}
             >
-              View dashboard
+              View Dashboard
             </div>:
               <div
               className={styles.loginCard__body__button}

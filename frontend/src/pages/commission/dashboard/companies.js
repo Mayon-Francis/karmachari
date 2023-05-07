@@ -52,9 +52,9 @@ function CompaniesList() {
   ];
   return (
     <>
-      <CustomTitle title="Companies" />
+      <CustomTitle title="Employers" />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>EMPLOYER</div>
+        <div className={styles.registration__heading}>EMPLOYERS</div>
         <div className={styles.jobDescription__container_inner}>
           <div>
             <DataGrid

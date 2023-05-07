@@ -118,7 +118,7 @@ function SchoolsList() {
       <ViewSchoolProfileModal open={open} handleClose={handleClose} />
 
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>SCHOOL/COLLEGE</div>
+        <div className={styles.registration__heading}>SCHOOLS / COLLEGES</div>
         <div className={styles.jobDescription__container_inner}>
           {loading ? (
             <div
@@ -137,7 +137,7 @@ function SchoolsList() {
                     textAlign: "center",
                   }}
                 >
-                  No School/College Found
+                  No Schools/Colleges Found
                 </div>
               ) : (
                 <DataGrid

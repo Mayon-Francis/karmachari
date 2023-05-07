@@ -54,7 +54,7 @@ function SchoolsList() {
     <>
       <CustomTitle title="Schools" />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>SCHOOL/COLLEGE</div>
+        <div className={styles.registration__heading}>SCHOOLS / COLLEGES</div>
         <div className={styles.jobDescription__container_inner}>
           <div>
             <DataGrid
