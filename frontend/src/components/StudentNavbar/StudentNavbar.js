@@ -207,14 +207,11 @@ function StudentNavbar() {
               ) : (
                 ""
               )}
-                                <MenuItem
+              {router.pathname.includes("admin") && (
+                <>
+                  <MenuItem
                     onClick={() => {
-                      if (router.pathname.includes("/admin")) {
-                        router.push("/admin/dashboard/inquiries");
-                      }
-                      // } else if (router.pathname.includes("/commission")) {
-                      //   router.push("/commission/dashboard/inquiries");
-                      // }
+                      router.push("/admin/dashboard/inquiries");
                     }}
                     style={{
                       color: "#00487c",
@@ -224,12 +221,7 @@ function StudentNavbar() {
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
-                      if (router.pathname.includes("/admin")) {
-                        router.push("/admin/dashboard/statistics");
-                      }
-                      // } else if (router.pathname.includes("/commission")) {
-                      //   router.push("/commission/dashboard/inquiries");
-                      // }
+                      router.push("/admin/dashboard/statistics");
                     }}
                     style={{
                       color: "#00487c",
@@ -237,6 +229,9 @@ function StudentNavbar() {
                   >
                     Statistics
                   </MenuItem>
+                </>
+              )}
+
               <MenuItem
                 onClick={() => {
                   if (router.pathname.includes("/admin")) {
@@ -268,7 +263,6 @@ function StudentNavbar() {
               >
                 Logout
               </MenuItem>
-              
             </Menu>
           ) : (
             <div className={styles.buttons}>
@@ -519,17 +513,39 @@ function StudentNavbar() {
                         ""
                       )}
                       {router.pathname.includes("/admin") ? (
-                        <div
-                          onClick={() => {
-                            if (router.pathname.includes("/admin")) {
+                        <>
+                          <div
+                            onClick={() => {
+                              router.push("/admin/dashboard/inquiries");
+                              handleDrawerClose();
+                            }}
+                            style={{
+                              color: "#00487c",
+                            }}
+                          >
+                            View Inquiries
+                          </div>
+                          <div
+                            onClick={() => {
+                              router.push("/admin/dashboard/statistics");
+                              handleDrawerClose();
+                            }}
+                            style={{
+                              color: "#00487c",
+                            }}
+                          >
+                            Statistics
+                          </div>
+                          <div
+                            onClick={() => {
                               router.push("/admin/dashboard/commissioners");
-                            }
-                            handleDrawerClose();
-                          }}
-                          className={styles.navbar_link}
-                        >
-                          View Official
-                        </div>
+                              handleDrawerClose();
+                            }}
+                            className={styles.navbar_link}
+                          >
+                            View Official
+                          </div>
+                        </>
                       ) : (
                         ""
                       )}

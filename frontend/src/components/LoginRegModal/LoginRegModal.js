@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 
 function LoginRegModal({ open, handleClose }) {
   const [login, setLogin] = useState("");
-  const logins = ["Others","School/College", "Official", "admin"];
+  const logins = ["Others", "School/College", "Official", "admin"];
   const router = useRouter();
 
   const handleChange = (event) => {
@@ -127,16 +127,22 @@ function LoginRegModal({ open, handleClose }) {
                 </Select>
               </FormControl> */}
               <select
-              className={styles.otherlogin__selector}
-                  id="select-login"
-                  value={login}
-                  onChange={handleChange}>
-              {logins.map((job) => {
-                    return (
-                      <option className={styles.otherlogin__options} value={job} key={job}>
-                        {job.charAt(0).toUpperCase() + job.slice(1)}
-                      </option>
-                    );})}
+                className={styles.otherlogin__selector}
+                id="select-login"
+                value={login}
+                onChange={handleChange}
+              >
+                {logins.map((job) => {
+                  return (
+                    <option
+                      className={styles.otherlogin__options}
+                      value={job}
+                      key={job}
+                    >
+                      {job.charAt(0).toUpperCase() + job.slice(1)}
+                    </option>
+                  );
+                })}
               </select>
             </div>
           </div>
