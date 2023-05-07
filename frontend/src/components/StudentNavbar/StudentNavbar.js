@@ -98,6 +98,7 @@ function StudentNavbar() {
               }
               transition
             >
+              {router.pathname.includes("/student")? <></>:
               <MenuItem
                 onClick={() => {
                   if (router.pathname.includes("/admin")) {
@@ -108,16 +109,14 @@ function StudentNavbar() {
                     router.push("/company/dashboard");
                   } else if (router.pathname.includes("/school")) {
                     router.push("/school/dashboard");
-                  } else if (router.pathname.includes("/student")) {
-                    router.push("/student/dashboard");
-                  }
+                  } 
                 }}
                 style={{
                   color: "#00487c",
                 }}
               >
                 Dashboard
-              </MenuItem>
+              </MenuItem>}
               {router.pathname.includes("/school/") ||
               router.pathname.includes("/admin") ? (
                 <MenuItem
