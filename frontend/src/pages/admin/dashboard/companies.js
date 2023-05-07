@@ -122,10 +122,10 @@ function CompaniesList() {
 
   return (
     <>
-      <CustomTitle title="Companies" />
+      <CustomTitle title="Employers" />
       <ViewCompanyProfileModal open={open} handleClose={handleClose} />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>EMPLOYER</div>
+        <div className={styles.registration__heading}>EMPLOYERS</div>
         <div className={styles.jobDescription__container_inner}>
           {loading ? (
             <div
@@ -144,7 +144,7 @@ function CompaniesList() {
                     textAlign: "center",
                   }}
                 >
-                  No Companies Found
+                  No Employers Found
                 </div>
               ) : (
                 <DataGrid

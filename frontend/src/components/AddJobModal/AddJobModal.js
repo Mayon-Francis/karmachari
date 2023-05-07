@@ -15,13 +15,14 @@ function AddJobModal({ open, handleClose }) {
     jobCategories[0] || "Select Category"
   );
   const [jobType, setJobType] = React.useState("Select Job Type");
-  const [district, setdistrict] = React.useState("Select District");
+  const [district, setdistrict] = React.useState(
+    districts[0] || "Select District"
+  );
   const [address, setAddress] = React.useState("");
   const [description, setDescription] = React.useState("");
   const { user, userData } = React.useContext(userContext);
 
   const handleSubmit = async (e) => {
-    handleClose();
     e.preventDefault();
     let data = {
       company_name: userData.name,
@@ -33,6 +34,7 @@ function AddJobModal({ open, handleClose }) {
       category: category,
       location: district,
     };
+    handleClose();
     await handlePost(user.accessToken, data, "jobs");
   };
   return (
@@ -123,7 +125,14 @@ function AddJobModal({ open, handleClose }) {
                 <div
                   className={styles.loginCard__body__title__text__text__input}
                 >
-                  <select name="district" id="district" value={district.label}>
+                  <select
+                    name="district"
+                    id="district"
+                    value={district.label}
+                    onChange={(e) => {
+                      setdistrict(e.target.value);
+                    }}
+                  >
                     {districts.map((district) => (
                       <option value={district}>{district}</option>
                     ))}

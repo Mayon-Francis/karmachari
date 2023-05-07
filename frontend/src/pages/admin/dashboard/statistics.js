@@ -137,7 +137,7 @@ function Statistics() {
                     textAlign: "center",
                   }}
                 >
-                  No Schools Found
+                  No Statistics Found
                 </div>
               ) : (
                 <DataGrid

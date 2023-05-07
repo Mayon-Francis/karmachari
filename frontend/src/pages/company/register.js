@@ -98,11 +98,11 @@ function CompanyRegistration() {
     <>
       <CustomTitle title="Company Registration" />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>COMPANY REGISTRATION</div>
+        <div className={styles.registration__heading}>EMPLOYER REGISTRATION</div>
         <div className={styles.registration__form}>
           <div className={styles.registration__form__section}>
             <div className={styles.registration__form__section__heading}>
-              Company Details
+              Establishment Details
             </div>
             <div className={styles.registration__form__section__fields}>
               <div className={styles.registration__form__section__field}>
@@ -270,7 +270,7 @@ function CompanyRegistration() {
                 <div
                   className={styles.registration__form__section__field__label}
                 >
-                  Company Logo*
+                  Establishment Logo*
                 </div>
                 <div
                   className={styles.registration__form__section__field__input}

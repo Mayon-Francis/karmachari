@@ -164,11 +164,20 @@ function CompanyDashboard() {
               >
                 <ClipLoader color="#00487c" loading={loading} size={50} />
               </div>
-            ) : (
+            ) : data.length > 0 ? (
               <div className={styles.jobCards__container_1}>
                 {data.map((job) => (
                   <NewJobCard job={job} />
                 ))}
+              </div>
+            ) : (
+              <div
+                className={styles.jobDescription__container_header}
+                style={{
+                  color: "#00487c",
+                }}
+              >
+                No Jobs Available
               </div>
             )}
           </div>

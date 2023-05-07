@@ -95,10 +95,10 @@ function Inquiries() {
 
   return (
     <>
-      <CustomTitle title="School Students" />
+      <CustomTitle title="Contact Us Submissions" />
       <ViewMessagesModal open={open} handleClose={handleClose} />
       <div className={styles.registration__container}>
-        <div className={styles.registration__heading}>View Contact Us Submissions</div>
+        <div className={styles.registration__heading}>Contact Us Submissions</div>
         <div className={styles.jobDescription__container_inner}>
           {loading ? (
             <div
@@ -117,7 +117,7 @@ function Inquiries() {
                     textAlign: "center",
                   }}
                 >
-                  No Students Found
+                  No Submissions Found
                 </div>
               ) : (
                 <DataGrid

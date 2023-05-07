@@ -30,7 +30,7 @@ const handlePost = async (authToken, body, url) => {
     const res = await axios.post(`${backendURL}/${url}`, body, {
       headers: { "x-auth-token": `${authToken}` },
     });
-    toast.success("rregistration successful");
+    toast.success("Registration Successful");
   } catch (err) {
     console.log(err);
     toast.error(err.response.data.message);
@@ -58,7 +58,7 @@ const handlePut = async (authToken, url, body) => {
     toast.success(res.data.message);
     return res.data.data;
   } catch (err) {
-    toast.error("something went wrong");
+    toast.error("Something went wrong.");
     throw new Error(err);                                            
   }
 };

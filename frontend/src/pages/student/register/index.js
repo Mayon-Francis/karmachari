@@ -20,9 +20,7 @@ function StudentRegistration() {
   //Academic Details
   const [schools, setSchools] = React.useState([]);
   const [school, setSchool] = React.useState("");
-  const [district, setDistrict] = React.useState(
-    districts[0] || "Select District"
-  );
+  const [district, setDistrict] = React.useState("");
   const [bio, setBio] = React.useState("");
   const [address, setAddress] = React.useState("");
 
@@ -46,6 +44,7 @@ function StudentRegistration() {
     getSchools().then((res) => {
       setSchools(res);
       setSchool(res[0]);
+      setDistrict(res[0].district);
     });
   }, []);
 
@@ -171,6 +170,7 @@ function StudentRegistration() {
     setResume("");
     setAadhar();
     setConsent("");
+    setPhoto("");
     document.getElementById("idCard").value = "";
     document.getElementById("aadhar").value = "";
     document.getElementById("consent").value = "";
@@ -334,6 +334,7 @@ function StudentRegistration() {
                       onChange={(e) => {
                         console.log(JSON.parse(e.target.value));
                         setSchool(JSON.parse(e.target.value));
+                        setDistrict(JSON.parse(e.target.value).district);
                       }}
                     >
                       {schools?.map((school) => (
@@ -353,18 +354,16 @@ function StudentRegistration() {
                   <div
                     className={styles.registration__form__section__field__input}
                   >
-                    <select
-                      name="district"
-                      id="district"
+                    <input
+                      // name="district"
+                      // id="district"
                       value={district}
-                      onChange={(e) => {
-                        setDistrict(e.target.value);
-                      }}
-                    >
-                      {districts.map((district) => (
+                      disabled
+                    />
+                    {/* {districts.map((district) => (
                         <option value={district}>{district}</option>
-                      ))}
-                    </select>
+                      ))} 
+                    </select>*/}
                   </div>
                 </div>
               </div>

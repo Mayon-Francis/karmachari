@@ -41,12 +41,12 @@ const getadminCompany = asyncHandler(async (req, res) => {
   } else {
     company_details = await companyModel.find({});
   }
-  if (company_details.length !== 0) {
+  if (company_details) {
     res.status(200).json(company_details);
   } else {
     res
       .status(500)
-      .json({ message: "something went wrong no data is comming from db" });
+      .json({ message: "Something went wrong." });
   }
 });
 const putSchool = asyncHandler(async (req, res) => {
@@ -56,7 +56,7 @@ const putSchool = asyncHandler(async (req, res) => {
     .then((updatedData) => {
       
       mailer(updatedData, "school")
-      res.status(200).json({data:updatedData, message:"successfully verified"});
+      res.status(200).json({data:updatedData, message:"Successfully Verified"});
     })
     .catch((error) => {
       res.status(500);
@@ -69,7 +69,7 @@ const putCompany = asyncHandler(async (req, res) => {
     .findByIdAndUpdate(req.body._id, { verified: true }, { new: true })
     .then((updatedData) => {
       mailer(updatedData, "comapny");
-      res.status(200).json({data:updatedData, message:"successfully verified"});
+      res.status(200).json({data:updatedData, message:"Successfully Verified"});
     })
     .catch((error) => {
       cons
@@ -84,7 +84,7 @@ const putCommission = asyncHandler(async (req, res) => {
     .findByIdAndUpdate(req.body._id, { verified: true }, { new: true })
     .then((updatedData) => {
       mailer(updatedData,"commission");
-      res.status(200).json({data:updatedData, message:"successfully verified"});
+      res.status(200).json({data:updatedData, message:"Successfully Verified"});
     })
     .catch((error) => {
       res.status(500);
@@ -159,12 +159,12 @@ const getSchoolStudDetails = asyncHandler(async (req, res) => {
    let  students_details = await studentModel.find({
       verified: true
    })
-  if (students_details.length !== 0) {
+  if (students_details) {
     res.status(200).json(students_details);
   } else {
     res
       .status(500)
-      .json({ message: "something went wrong no data is comming from db" });
+      .json({ message: "Something went wrong." });
   }
 });
 
