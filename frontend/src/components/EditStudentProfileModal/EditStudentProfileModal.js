@@ -133,7 +133,7 @@ function EditStudentProfileModal({ open, handleClose }) {
             <div className={styles.field}>
               <div className={styles.input__label}>District</div>
               <div className={styles.loginCard__body__title__text__text__input}>
-                <select name="district" id="district" value={district}>
+                <select name="district" id="district" value={district} onChange={(e)=>{setDistrict(e.target.value)}}>
                   {districts.map((district) => (
                     <option value={district} key={district}>{district}</option>
                   ))}
